@@ -7,8 +7,10 @@
             <MudItem xs="12" sm="8">
                 <MudChart T="double" ChartType="ChartType.Donut" Width="100%" Height="290px" ChartSeries="_series" ChartLabels="_rotulos" ChartOptions="_opcoes">
                     <CustomGraphics>
-                        <text x="50%" y="46%" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="700" fill="currentColor" @Total.ToString("N0", CulturaBr) </text>
-                        <text x=" 50%" y="58%" text-anchor="middle" dominant-baseline="middle" font-size="14" fill="currentColor" opacity="0.6">
+                        <text x="50%" y="48%" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="700" fill="currentColor">
+                            @(Total.ToString("N0", CulturaBr))
+                        </text>
+                        <text x="50%" y="58%" text-anchor="middle" dominant-baseline="middle" font-size="14" fill="currentColor" opacity="0.6">
                             clientes
                         </text>
                     </CustomGraphics>
@@ -31,16 +33,27 @@
         </MudGrid>
     </ChildContent>
 </DashboardCard>
+
 @code {
     private static readonly System.Globalization.CultureInfo CulturaBr = new("pt-BR");
+
     [Parameter, EditorRequired] public int Total { get; set; }
     [Parameter, EditorRequired] public IReadOnlyList<SegmentoCliente> Segmentos { get; set; } = Array.Empty<SegmentoCliente>();
+
     private List<ChartSeries<double>> _series = new();
     private string[] _rotulos = Array.Empty<string>();
     private DonutChartOptions _opcoes = new();
+
     protected override void OnParametersSet()
     {
-        _series = new() { new ChartSeries<double> { Name = "Clientes", Data = Segmentos.Select(s => (double)s.Percentual).ToArray() } };
+        _series = new()
+        {
+            new ChartSeries<double>
+            {
+                Name = "Clientes",
+                Data = Segmentos.Select(s => (double)s.Percentual).ToArray()
+            }
+        };
         _rotulos = Segmentos.Select(s => s.Nome).ToArray();
         _opcoes = new DonutChartOptions
         {
