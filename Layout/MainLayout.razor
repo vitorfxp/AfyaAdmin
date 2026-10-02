@@ -9,7 +9,7 @@
         <MudDivider Vertical="true" FlexItem="true" Class="mx-3 my-3" />
         <MudBreadcrumbs Items="_breadcrumbs" Class="d-none d-md-flex" />
         <MudSpacer />
-        <MudPaper Elevation="0" Width="440px" Class="mud-background-gray rounded-lg px-3 d-none d-md-flex">
+        <MudPaper Elevation="0" Width="440px" Class="mud-background-gray rounded-lg px-3 d-none d-lg-flex">
             <MudTextField T="string" @bind-Value="_busca" Placeholder="Pesquisar..." Underline="false" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" Margin="Margin.Dense" />
         </MudPaper>
         <MudSpacer />
@@ -39,7 +39,7 @@
             <MudDivider Vertical="true" FlexItem="true" Class="mx-3 my-4" />
             <MudMenu AnchorOrigin="Origin.BottomRight" TransformOrigin="Origin.TopRight">
                 <ActivatorContent>
-                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2" @onclick="@context.ToggleAsync">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2" @onclick="@context.ToggleAsync" Class="flex-nowrap">
                         <MudAvatar Size="Size.Large">
                             <MudImage Src="img/banco-de-dados.png" Alt="Banco de dados" />
                         </MudAvatar>
@@ -48,7 +48,7 @@
                                 <MudText Typo="Typo.subtitle2">Sr. Banco de dados</MudText>
                                 <MudChip T="string" Size="Size.Small" Color="Color.Success" Variant="Variant.Text" Class="ma-0">Online</MudChip>
                             </MudStack>
-                            <MudText Typo="Typo.caption" Class="mud-text-secondary">banco.dados@afya.com.br</MudText>
+                            <MudText Typo="Typo.caption" Class="mud-text-secondary mud-typography-nowrap">banco.dados@afya.com.br</MudText>
                         </MudStack>
                         <MudIcon Icon="@Icons.Material.Filled.KeyboardArrowDown" Size="Size.Small" />
                     </MudStack>
