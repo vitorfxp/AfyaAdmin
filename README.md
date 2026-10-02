@@ -52,6 +52,8 @@ O terminal mostra a URL (por exemplo, `http://localhost:5147`). A porta pode var
 
 ![Inspeção do HTML no DevTools](docs/prints/devtools.png)
 
+Explique em poucas linhas o que o print do DevTools mostra: qual componente você inspecionou, qual HTML ele gerou e quais classes apareceram.
+
 Ao inspecionar o HTML gerado, cada parâmetro dos componentes vira uma classe CSS. O `<MudPaper Elevation="1" Class="pa-4">` virou uma `<div class="mud-paper mud-elevation-1 pa-4">`, e o `Height="100%"` virou o atributo `style`. Os `<MudStack>` viraram `<div>` com classes de flexbox: `Row="true"` virou `flex-row`, `AlignItems.Center` virou `align-center` e `Spacing="3"` virou `gap-3`. O `<MudButton>` virou um `<button>` com `mud-button-filled`, `mud-button-filled-primary` e `mud-button-filled-size-large`, vindos de `Variant`, `Color` e `Size`. Já o `<MudAvatar>` do KPI recebeu a classe `mud-success-hover`, devolvida por `Ui.FundoSuave(Color.Success)`, que cria o fundo verde claro sem CSS próprio.
 
 ## Estrutura do projeto
