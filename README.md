@@ -162,6 +162,6 @@ Há alguns bugs no projeto tanto na versão mobile quanto na hora de testar dos 
 
 ## Melhorias futuras (opcional)
 
-Acho que deixaria o site dinâmico (Deixar ele sem hardcode), é legal construir o layout com dados estátiscos porém ter dados reais que se alteram ao passar do tempo se tornar um desafio maior e te preparar mais ainda ao mercado de trabalho.
+Acho que deixaria o site dinâmico (Deixar ele sem hardcode), é legal construir o layout com dados estátiscos porém ter dados reais que se alteram ao passar do tempo se torna um desafio maior e te preparar mais ainda ao mercado de trabalho.
 
 Não fiz os desafios adicionais.
