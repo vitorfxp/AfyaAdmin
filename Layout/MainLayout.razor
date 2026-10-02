@@ -18,7 +18,7 @@
             <MudMenu AnchorOrigin="Origin.BottomRight" TransformOrigin="Origin.TopRight">
                 <ActivatorContent>
                     @* padding no wrapper (e não no MudBadge) para o badge continuar colado no ícone *@
-                    <div class="d-flex pa-3 cursor-pointer">
+                    <div class="d-flex pa-3 cursor-pointer" @onclick="@context.ToggleAsync">
                         <MudBadge Content="@_notificacoes.Count" Color="Color.Error">
                             <MudIcon Icon="@Icons.Material.Outlined.Notifications" Size="Size.Medium" />
                         </MudBadge>
@@ -39,7 +39,7 @@
             <MudDivider Vertical="true" FlexItem="true" Class="mx-3 my-4" />
             <MudMenu AnchorOrigin="Origin.BottomRight" TransformOrigin="Origin.TopRight">
                 <ActivatorContent>
-                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2" @onclick="@context.ToggleAsync">
                         <MudAvatar Size="Size.Large">
                             <MudImage Src="img/banco-de-dados.png" Alt="Banco de dados" />
                         </MudAvatar>
