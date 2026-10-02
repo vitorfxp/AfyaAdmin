@@ -52,13 +52,7 @@ O terminal mostra a URL (por exemplo, `http://localhost:5147`). A porta pode var
 
 ![Inspeção do HTML no DevTools](docs/prints/devtools.png)
 
-Card de KPI: o <MudPaper> virou uma <div class="mud-paper mud-elevation-1 pa-4" style="height:100%;">. A classe mud-paper identifica o componente, mud-elevation-1 vem do parâmetro Elevation="1", e o Height="100%" virou o atributo style. O Class="pa-4" que escrevi no código aparece no HTML final exatamente igual, junto com as classes que o MudBlazor adicionou.
-
-Os <MudStack> viraram <div role="group"> com classes de flexbox. O primeiro (ícone + título/valor) ficou d-flex flex-row align-center gap-3: Row="true" virou flex-row, AlignItems.Center virou align-center e Spacing="3" virou gap-3. O segundo (variação + gráfico) ficou d-flex flex-row justify-space-between align-end gap-3 mt-2, em que Justify.SpaceBetween virou justify-space-between e o Class="mt-2" que escrevi foi acrescentado no final.
-
-O <MudAvatar> do ícone virou uma <div class="mud-avatar mud-avatar-large mud-avatar-filled mud-avatar-filled-default mud-elevation-0 mud-success-hover">. As classes mud-avatar-large e mud-avatar-filled vêm dos parâmetros Size e Variant. A classe mud-success-hover é a que a função Ui.FundoSuave(Color.Success) devolveu e eu passei em Class: ela cria o fundo verde claro atrás do ícone, sem CSS próprio. Já o <MudChart> (o sparkline) virou uma <div class="mud-chart mud-chart-legend-bottom"> com style="width: 110px; height: 50px;", valores que vieram dos parâmetros Width e Height.
-
-Botão: o <MudButton> virou uma tag <button type="button"> com as classes mud-button-root mud-button mud-button-filled mud-button-filled-primary mud-button-filled-size-large mud-ripple. Cada parâmetro virou uma classe: Variant.Filled virou mud-button-filled, Color.Primary virou mud-button-filled-primary e Size.Large virou mud-button-filled-size-large. Dentro dele há um <span class="mud-button-label"> com o ícone (mud-button-icon-start, vindo do StartIcon) e o texto "Novo Projeto".
+Ao inspecionar o HTML gerado, cada parâmetro dos componentes vira uma classe CSS. O `<MudPaper Elevation="1" Class="pa-4">` virou uma `<div class="mud-paper mud-elevation-1 pa-4">`, e o `Height="100%"` virou o atributo `style`. Os `<MudStack>` viraram `<div>` com classes de flexbox: `Row="true"` virou `flex-row`, `AlignItems.Center` virou `align-center` e `Spacing="3"` virou `gap-3`. O `<MudButton>` virou um `<button>` com `mud-button-filled`, `mud-button-filled-primary` e `mud-button-filled-size-large`, vindos de `Variant`, `Color` e `Size`. Já o `<MudAvatar>` do KPI recebeu a classe `mud-success-hover`, devolvida por `Ui.FundoSuave(Color.Success)`, que cria o fundo verde claro sem CSS próprio.
 
 ## Estrutura do projeto
 
