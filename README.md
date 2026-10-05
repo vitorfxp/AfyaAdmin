@@ -27,7 +27,7 @@ O objetivo do projeto é na construção de um painel administrativo (Dashboard)
 Pré-requisito: **.NET SDK 10** (confira com `dotnet --version`, que deve começar com `10.`).
 
 ```bash
-git clone https://github.com/SEU-USUARIO/afya-admin.git
+git clone https://github.com/vitorfxp/afya-admin.git
 cd afya-admin
 dotnet watch
 ```
